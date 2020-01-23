@@ -1,4 +1,10 @@
+https://csound.com/docs/manual/UsingDesign.html
+
+ 
+
+
 http://www.csounds.com/internals/
+
 
 
 http://www.csoundjournal.com/issue17/gogins_composing_in_cpp.html
