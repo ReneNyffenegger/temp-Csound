@@ -1,0 +1,2 @@
+http://www.csoundjournal.com/issue17/gogins_composing_in_cpp.html
+   This article describes how to write algorithmic compositions for Csound in C++.
