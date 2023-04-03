@@ -1,11 +1,12 @@
+csound.h:
+   https://github.com/csound/csound/blob/master/include/csound.h
+      csoundScoreEvent
+      csoundScoreEventAsync
+      --> Send a new score event. a, i, q, f or e
+
 https://csound.com/docs/manual/UsingDesign.html
 
- 
-
-
 http://www.csounds.com/internals/
-
-
 
 http://www.csoundjournal.com/issue17/gogins_composing_in_cpp.html
    This article describes how to write algorithmic compositions for Csound in C++.
