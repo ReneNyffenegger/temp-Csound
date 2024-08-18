@@ -1,0 +1,164 @@
+git clone https://github.com/csound/csound
+mkdir cs6make
+cd cs6make
+cmake ../csound
+
+#  Could NOT find ALSA (missing: ALSA_LIBRARY ALSA_INCLUDE_DIR)
+#  -----------------------------------------------------------
+   sudo apt-get install -y libasound2-dev
+
+   #  apt-cache show libasound2-dev:
+   #
+   #  Description-en: shared library for ALSA applications -- development files
+   #   This package contains files required for developing software
+   #   that makes use of libasound2, the ALSA library.
+
+
+cmake ../csound
+
+#    CMake Error at cmake/cmake-utilities.cmake:109 (target_link_libraries):
+#      Target "stdutil" links to:
+#    
+#        SndFile::sndfile
+#    
+#      but the target was not found.  Possible reasons include:
+#    
+#        * There is a typo in the target name.
+#        * A find_package call is missing for an IMPORTED target.
+#        * An ALIAS target is missing.
+#    
+#    Call Stack (most recent call first):
+#      util/CMakeLists.txt:13 (make_plugin)
+# ---------------------------------------------------------------------------
+   sudo apt-get install -y libsndfile1-dev
+
+   #  apt-cache show libsndfile1-dev:
+   #
+   #  Description-en: Development files for libsndfile; a library for reading/writing audio files
+   #   libsndfile is a library of C routines for reading and writing files containing
+   #   sampled audio data.
+
+cmake ../csound
+
+make -j
+
+sudo make install 
+#  
+#  -- Install configuration: ""
+#  -- Installing: /usr/local/lib/libcsound64.so.7.0
+#  -- Set runtime path of "/usr/local/lib/libcsound64.so.7.0" to "$ORIGIN"
+#  -- Installing: /usr/local/lib/libcsound64.so
+#  -- Installing: /usr/local/share/csound/CsoundConfig.cmake
+#  -- Installing: /usr/local/share/csound/CsoundConfig-noconfig.cmake
+#  -- Installing: /usr/local/share/samples
+#  -- Installing: /usr/local/share/samples/README
+#  -- Installing: /usr/local/share/samples/hrtf-44100-left.dat
+#  -- Installing: /usr/local/share/samples/hrtf-44100-right.dat
+#  -- Installing: /usr/local/share/samples/hrtf-48000-left.dat
+#  -- Installing: /usr/local/share/samples/hrtf-48000-right.dat
+#  -- Installing: /usr/local/share/samples/hrtf-96000-left.dat
+#  -- Installing: /usr/local/share/samples/hrtf-96000-right.dat
+#  -- Installing: /usr/local/share/samples/sf_GMbank.sf2
+#  -- Installing: /usr/local/include/csound/arrays.h
+#  -- Installing: /usr/local/include/csound/cfgvar.h
+#  -- Installing: /usr/local/include/csound/cs_par_structs.h
+#  -- Installing: /usr/local/include/csound/cscore.h
+#  -- Installing: /usr/local/include/csound/csdebug.h
+#  -- Installing: /usr/local/include/csound/csdl.h
+#  -- Installing: /usr/local/include/csound/csound.h
+#  -- Installing: /usr/local/include/csound/csoundCore.h
+#  -- Installing: /usr/local/include/csound/csound_data_structures.h
+#  -- Installing: /usr/local/include/csound/csound_standard_types.h
+#  -- Installing: /usr/local/include/csound/csound_type_system.h
+#  -- Installing: /usr/local/include/csound/cwindow.h
+#  -- Installing: /usr/local/include/csound/find_opcode.h
+#  -- Installing: /usr/local/include/csound/interlocks.h
+#  -- Installing: /usr/local/include/csound/modload.h
+#  -- Installing: /usr/local/include/csound/msg_attr.h
+#  -- Installing: /usr/local/include/csound/plugin.h
+#  -- Installing: /usr/local/include/csound/pools.h
+#  -- Installing: /usr/local/include/csound/pstream.h
+#  -- Installing: /usr/local/include/csound/pvfileio.h
+#  -- Installing: /usr/local/include/csound/soundfile.h
+#  -- Installing: /usr/local/include/csound/soundio.h
+#  -- Installing: /usr/local/include/csound/sysdep.h
+#  -- Installing: /usr/local/include/csound/text.h
+#  -- Installing: /usr/local/include/csound/ugen.h
+#  -- Installing: /usr/local/include/csound/csPerfThread.hpp
+#  -- Installing: /usr/local/include/csound/csound.hpp
+#  -- Installing: /usr/local/include/csound/csound_threaded.hpp
+#  -- Installing: /usr/local/include/csound/float-version.h
+#  -- Installing: /usr/local/include/csound/version.h
+#  -- Installing: /usr/local/lib/csound/plugins64-7.0/libjoystick.so
+#  -- Set runtime path of "/usr/local/lib/csound/plugins64-7.0/libjoystick.so" to "$ORIGIN/../../../lib"
+#  -- Installing: /usr/local/lib/csound/plugins64-7.0/libdeprecated.so
+#  -- Set runtime path of "/usr/local/lib/csound/plugins64-7.0/libdeprecated.so" to "$ORIGIN/../../../lib"
+#  -- Installing: /usr/local/lib/csound/plugins64-7.0/librtalsa.so
+#  -- Set runtime path of "/usr/local/lib/csound/plugins64-7.0/librtalsa.so" to "$ORIGIN/../../../lib"
+#  -- Installing: /usr/local/lib/csound/plugins64-7.0/libipmidi.so
+#  -- Set runtime path of "/usr/local/lib/csound/plugins64-7.0/libipmidi.so" to "$ORIGIN/../../../lib"
+#  -- Installing: /usr/local/bin/csound
+#  -- Set runtime path of "/usr/local/bin/csound" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/csdebugger
+#  -- Set runtime path of "/usr/local/bin/csdebugger" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/csbeats
+#  -- Set runtime path of "/usr/local/bin/csbeats" to "$ORIGIN/../lib"
+#  -- Installing: /usr/lib/python3/dist-packages/ctcsound.py
+#  -- Installing: /usr/local/lib/csound/plugins64-7.0/libstdutil.so
+#  -- Set runtime path of "/usr/local/lib/csound/plugins64-7.0/libstdutil.so" to "$ORIGIN/../../../lib"
+#  -- Installing: /usr/local/bin/atsa
+#  -- Set runtime path of "/usr/local/bin/atsa" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/csanalyze
+#  -- Set runtime path of "/usr/local/bin/csanalyze" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/cvanal
+#  -- Set runtime path of "/usr/local/bin/cvanal" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/dnoise
+#  -- Set runtime path of "/usr/local/bin/dnoise" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/envext
+#  -- Set runtime path of "/usr/local/bin/envext" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/extractor
+#  -- Set runtime path of "/usr/local/bin/extractor" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/het_export
+#  -- Set runtime path of "/usr/local/bin/het_export" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/het_import
+#  -- Set runtime path of "/usr/local/bin/het_import" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/hetro
+#  -- Set runtime path of "/usr/local/bin/hetro" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/lpanal
+#  -- Set runtime path of "/usr/local/bin/lpanal" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/lpc_export
+#  -- Set runtime path of "/usr/local/bin/lpc_export" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/lpc_import
+#  -- Set runtime path of "/usr/local/bin/lpc_import" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/mixer
+#  -- Set runtime path of "/usr/local/bin/mixer" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/pvanal
+#  -- Set runtime path of "/usr/local/bin/pvanal" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/pvlook
+#  -- Set runtime path of "/usr/local/bin/pvlook" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/pv_export
+#  -- Set runtime path of "/usr/local/bin/pv_export" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/pv_import
+#  -- Set runtime path of "/usr/local/bin/pv_import" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/scale
+#  -- Set runtime path of "/usr/local/bin/scale" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/sndinfo
+#  -- Set runtime path of "/usr/local/bin/sndinfo" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/srconv
+#  -- Set runtime path of "/usr/local/bin/srconv" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/sdif2ad
+#  -- Set runtime path of "/usr/local/bin/sdif2ad" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/scsort
+#  -- Set runtime path of "/usr/local/bin/scsort" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/extract
+#  -- Set runtime path of "/usr/local/bin/extract" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/cs
+#  -- Set runtime path of "/usr/local/bin/cs" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/csb64enc
+#  -- Set runtime path of "/usr/local/bin/csb64enc" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/makecsd
+#  -- Set runtime path of "/usr/local/bin/makecsd" to "$ORIGIN/../lib"
+#  -- Installing: /usr/local/bin/scot
+#  -- Set runtime path of "/usr/local/bin/scot" to "$ORIGIN/../lib"
+
+
