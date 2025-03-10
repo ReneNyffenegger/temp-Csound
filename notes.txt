@@ -20,3 +20,5 @@ http://www.csoundjournal.com/issue17/gogins_composing_in_cpp.html
        https://github.com/stephanmullerNL/sonic-pi
        https://www.youtube.com/watch?v=4xkpPg9c3ps
 
+    https://github.com/davy7125/polyphone
+       Polyphone is a multiplatform and open-source soundfont editor for creating musical instruments.
