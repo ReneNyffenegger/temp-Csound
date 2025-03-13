@@ -14,7 +14,8 @@ http://www.csoundjournal.com/issue17/gogins_composing_in_cpp.html
 
 
 Livecoding
-   https://www.youtube.com/watch?v=eacyGKRBpwA
+   https://www.youtube.com/watch?v=eacyGKRBpwA  ( Mit csound plugin für emacs )
+   https://www.youtube.com/watch?v=Hc-lcAajQxo  ( TidalCycles )
 
 ----------------------------------------------------------------
 
