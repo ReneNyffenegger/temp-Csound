@@ -25,5 +25,9 @@ Livecoding
        https://github.com/stephanmullerNL/sonic-pi
        https://www.youtube.com/watch?v=4xkpPg9c3ps
 
-    https://github.com/davy7125/polyphone
-       Polyphone is a multiplatform and open-source soundfont editor for creating musical instruments.
+  https://github.com/davy7125/polyphone
+     Polyphone is a multiplatform and open-source soundfont editor for creating musical instruments.
+
+  Strudel
+     https://www.youtube.com/watch?v=oqyAJ4WeKoU
+     https://strudel.cc/workshop/first-effects/
